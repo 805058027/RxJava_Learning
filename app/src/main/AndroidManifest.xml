@@ -17,6 +17,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".EasyActivity" />
+        <activity android:name=".BasisOperator.JustActivity" />
+        <activity android:name=".BasisOperator.FromArrayActivity" />
+        <activity android:name=".BasisOperator.FromIterableActivity" />
+        <activity android:name=".BasisOperator.DeferActivity" />
+        <activity android:name=".BasisOperator.TimerActivity" />
+        <activity android:name=".BasisOperator.IntervalActivity" />
+        <activity android:name=".BasisOperator.RangActivity" />
     </application>
 
 </manifest>

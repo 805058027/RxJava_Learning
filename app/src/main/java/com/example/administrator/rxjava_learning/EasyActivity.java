@@ -57,22 +57,31 @@ public class EasyActivity extends Activity {
                 // ObservableEmitter类介绍
                 // a. 定义：事件发射器
                 // b. 作用：定义需要发送的事件 & 向观察者发送事件
+                emitter.onNext(0);
                 emitter.onNext(1);
                 emitter.onNext(2);
                 emitter.onNext(3);
                 emitter.onComplete();
             }
         });
+
         //观察者
         Observer<Integer> observer = new Observer<Integer>() {
+            //切断作用
+            Disposable mDisposable;
+
             @Override
             public void onSubscribe(Disposable d) {
+                mDisposable = d;
                 easyTxt.append("onSubscribe" + "---");
             }
 
             @Override
             public void onNext(Integer integer) {
-                easyTxt.append(integer + "---");
+                if (integer == 2) {
+                    mDisposable.dispose();
+                }
+                easyTxt.append(integer + "---mDisposable中断");
             }
 
             @Override
