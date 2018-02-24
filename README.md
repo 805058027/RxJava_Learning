@@ -25,8 +25,10 @@
 
 ### 基本操作符
 
-1.create（）       作用:完整创建1个被观察者对象（Observable）  
-2.just（）         作用:快速创建1个被观察者对象（Observable）    发送事件的特点：直接发送 传入的事件    Tip:最多发送10个事件
+1.create（）作用:完整创建1个被观察者对象（Observable）  
+2.just（） 作用:快速创建1个被观察者对象（Observable）    发送事件的特点：直接发送 传入的事件    Tip:最多发送10个事件  
+3.fromArray（）  作用：快速创建1个被观察者对象（Observable）  发送事件的特点：直接发送 传入的数组数据  Tip:最多发送10个数组事件  
+4.fromIterable（）  作用：快速创建1个被观察者对象（Observable） 发送事件的特点：直接发送 传入的集合List数据  Tip:最多发送10个数组事件 
 
 
 
