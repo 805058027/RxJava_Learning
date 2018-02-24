@@ -24,6 +24,9 @@
         <activity android:name=".BasisOperator.TimerActivity" />
         <activity android:name=".BasisOperator.IntervalActivity" />
         <activity android:name=".BasisOperator.RangActivity" />
+        <activity android:name=".ChangeOperator.MapActivity"/>
+        <activity android:name=".ChangeOperator.FlatMapActivity"/>
+        <activity android:name=".ChangeOperator.BufferActivity"/>
     </application>
 
 </manifest>
