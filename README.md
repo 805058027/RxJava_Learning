@@ -26,12 +26,17 @@
 ### 基本操作符
 
 1.create（）作用:完整创建1个被观察者对象（Observable）  
-2.just（） 作用:快速创建1个被观察者对象（Observable）    发送事件的特点：直接发送 传入的事件    Tip:最多发送10个事件  
-3.fromArray（）  作用：快速创建1个被观察者对象（Observable）  发送事件的特点：直接发送 传入的数组数据  Tip:最多发送10个数组事件  
-4.fromIterable（）  作用：快速创建1个被观察者对象（Observable） 发送事件的特点：直接发送 传入的集合List数据  Tip:最多发送10个数组事件  
+2.just（） 作用:快速创建1个被观察者对象（Observable）    发送事件的特点：直接发送 传入的事件      
+3.fromArray（）  作用：快速创建1个被观察者对象（Observable）  发送事件的特点：直接发送 传入的数组数据 
+4.fromIterable（）  作用：快速创建1个被观察者对象（Observable） 发送事件的特点：直接发送 传入的集合List数据  
 5.defer（）   作用：直到有观察者（Observer ）订阅时，才动态创建被观察者对象（Observable） & 发送事件  
-                    1.通过 Observable工厂方法创建被观察者对象（Observable）
-                    2.每次订阅后，都会得到一个刚创建的最新的Observable对象，这可以确保Observable对象里的数据是最新的
+6.timer（）   作用：快速创建1个被观察者对象（Observable）     发送事件的特点：延迟指定时间后，发送1个数值0（Long类型）  
+7.interval（）  作用：快速创建1个被观察者对象（Observable）   发送事件的特点：每隔指定时间 就发送 事件（无限递增）  
+8.intervalRange（）作用：快速创建1个被观察者对象（Observable）    发送事件的特点：每隔指定时间 就发送 事件，可指定发送的数据的数量  
+9.range（） 作用：快速创建1个被观察者对象（Observable）   发送事件的特点：连续发送 1个事件序列，可指定范围  
+10.rangeLong（）  作用：类似range方法,但是只支持long类型  
+
+                    
 
 
 
