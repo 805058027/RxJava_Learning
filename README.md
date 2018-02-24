@@ -28,7 +28,11 @@
 1.create（）作用:完整创建1个被观察者对象（Observable）  
 2.just（） 作用:快速创建1个被观察者对象（Observable）    发送事件的特点：直接发送 传入的事件    Tip:最多发送10个事件  
 3.fromArray（）  作用：快速创建1个被观察者对象（Observable）  发送事件的特点：直接发送 传入的数组数据  Tip:最多发送10个数组事件  
-4.fromIterable（）  作用：快速创建1个被观察者对象（Observable） 发送事件的特点：直接发送 传入的集合List数据  Tip:最多发送10个数组事件 
+4.fromIterable（）  作用：快速创建1个被观察者对象（Observable） 发送事件的特点：直接发送 传入的集合List数据  Tip:最多发送10个数组事件  
+5.defer（）   作用：直到有观察者（Observer ）订阅时，才动态创建被观察者对象（Observable） & 发送事件  
+                    1.通过 Observable工厂方法创建被观察者对象（Observable）
+                    2.每次订阅后，都会得到一个刚创建的最新的Observable对象，这可以确保Observable对象里的数据是最新的
+
 
 
 
