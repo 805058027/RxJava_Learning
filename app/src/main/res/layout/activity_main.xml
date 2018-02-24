@@ -89,13 +89,6 @@
                 android:layout_height="wrap_content"
                 android:text="Buffer操作符"
                 android:textAllCaps="false" />
-
-            <Button
-                android:id="@+id/btn12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="range---rangeLong"
-                android:textAllCaps="false" />
         </LinearLayout>
 
         <LinearLayout
@@ -104,6 +97,12 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/btn12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="range---rangeLong"
+                android:textAllCaps="false" />
 
         </LinearLayout>
     </LinearLayout>

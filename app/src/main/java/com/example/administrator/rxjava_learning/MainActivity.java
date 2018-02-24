@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, BufferActivity.class));
                 break;
             case R.id.btn12:
-                startActivity(new Intent(this, RangActivity.class));
+                //startActivity(new Intent(this, RangActivity.class));
                 break;
         }
     }
