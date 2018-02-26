@@ -24,9 +24,19 @@
         <activity android:name=".BasisOperator.TimerActivity" />
         <activity android:name=".BasisOperator.IntervalActivity" />
         <activity android:name=".BasisOperator.RangActivity" />
-        <activity android:name=".ChangeOperator.MapActivity"/>
-        <activity android:name=".ChangeOperator.FlatMapActivity"/>
-        <activity android:name=".ChangeOperator.BufferActivity"/>
+        <activity android:name=".ChangeOperator.MapActivity" />
+        <activity android:name=".ChangeOperator.FlatMapActivity" />
+        <activity android:name=".ChangeOperator.BufferActivity" />
+        <activity android:name=".CombinationOperator.ConcatActivity" />
+        <activity android:name=".CombinationOperator.MergeActivity" />
+        <activity android:name=".CombinationOperator.concatDelayErrorActivity" />
+        <activity android:name=".CombinationOperator.ZipActivity" />
+        <activity android:name=".CombinationOperator.CombineLatestActivity" />
+        <activity android:name=".CombinationOperator.ReduceActivity" />
+        <activity android:name=".CombinationOperator.CollectActivity" />
+        <activity android:name=".CombinationOperator.StartWithActivity" />
+        <activity android:name=".CombinationOperator.CountActivity" />
+
     </application>
 
 </manifest>

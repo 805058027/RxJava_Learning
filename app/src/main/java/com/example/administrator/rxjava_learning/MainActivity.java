@@ -15,6 +15,15 @@ import com.example.administrator.rxjava_learning.BasisOperator.TimerActivity;
 import com.example.administrator.rxjava_learning.ChangeOperator.BufferActivity;
 import com.example.administrator.rxjava_learning.ChangeOperator.FlatMapActivity;
 import com.example.administrator.rxjava_learning.ChangeOperator.MapActivity;
+import com.example.administrator.rxjava_learning.CombinationOperator.CollectActivity;
+import com.example.administrator.rxjava_learning.CombinationOperator.CombineLatestActivity;
+import com.example.administrator.rxjava_learning.CombinationOperator.ConcatActivity;
+import com.example.administrator.rxjava_learning.CombinationOperator.CountActivity;
+import com.example.administrator.rxjava_learning.CombinationOperator.MergeActivity;
+import com.example.administrator.rxjava_learning.CombinationOperator.ReduceActivity;
+import com.example.administrator.rxjava_learning.CombinationOperator.StartWithActivity;
+import com.example.administrator.rxjava_learning.CombinationOperator.ZipActivity;
+import com.example.administrator.rxjava_learning.CombinationOperator.concatDelayErrorActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -29,7 +38,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4, R.id.btn5, R.id.btn6, R.id.btn7, R.id.btn8,
-            R.id.btn9, R.id.btn10, R.id.btn11, R.id.btn12})
+            R.id.btn9, R.id.btn10, R.id.btn11, R.id.btn12, R.id.btn13, R.id.btn14, R.id.btn15, R.id.btn16,
+            R.id.btn17, R.id.btn18, R.id.btn19, R.id.btn20})
     public void OnClick(View view) {
         switch (view.getId()) {
             case R.id.btn1:
@@ -66,7 +76,31 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, BufferActivity.class));
                 break;
             case R.id.btn12:
-                //startActivity(new Intent(this, RangActivity.class));
+                startActivity(new Intent(this, ConcatActivity.class));
+                break;
+            case R.id.btn13:
+                startActivity(new Intent(this, MergeActivity.class));
+                break;
+            case R.id.btn14:
+                startActivity(new Intent(this, concatDelayErrorActivity.class));
+                break;
+            case R.id.btn15:
+                startActivity(new Intent(this, ZipActivity.class));
+                break;
+            case R.id.btn16:
+                startActivity(new Intent(this, CombineLatestActivity.class));
+                break;
+            case R.id.btn17:
+                startActivity(new Intent(this, ReduceActivity.class));
+                break;
+            case R.id.btn18:
+                startActivity(new Intent(this, CollectActivity.class));
+                break;
+            case R.id.btn19:
+                startActivity(new Intent(this, StartWithActivity.class));
+                break;
+            case R.id.btn20:
+                startActivity(new Intent(this, CountActivity.class));
                 break;
         }
     }
