@@ -55,6 +55,14 @@
 8.combineLatestDelayError（） 作用：类似于concatDelayError（） / mergeDelayError（） ，即错误处理  
 9.reduce（） 作用：把被观察者需要发送的事件聚合成1个事件 & 发送  本质：聚合的逻辑根据需求撰写，但本质都是前2个数据聚合，然后与后1个数据继续进行聚合，依次类推  
 10.collect（） 作用：将被观察者Observable发送的数据事件收集到一个数据结构里
+
+### 发送事件前追加发送事件
+
+startWith（） / startWithArray（）   在一个被观察者发送事件前，追加发送一些数据 / 一个新的被观察者
+
+### 统计发送事件数量
+
+count（）  统计被观察者发送事件的数量
                     
 
 
