@@ -47,9 +47,14 @@
 
 1.concat（）  作用：组合多个被观察者一起发送数据，合并后 按发送顺序串行执行
 2.concatArray（） 和1的区别：即concat（）组合被观察者数量≤4个，而concatArray（）则可＞4个  
-3.merge（）  作用：组合多个被观察者一起发送数据，合并后 按时间线并行执行
-4.mergeArray（） 和3的区别：组合被观察者的数量，即merge（）组合被观察者数量≤4个，而mergeArray（）则可＞4个
-
+3.merge（）  作用：组合多个被观察者一起发送数据，合并后 按时间线并行执行  
+4.mergeArray（） 和3的区别：组合被观察者的数量，即merge（）组合被观察者数量≤4个，而mergeArray（）则可＞4个  
+5.concatDelayError（） mergeDelayError（） 防止若其中一个观察者出现OnError事件,立即中断所有继续发送事件  
+6.Zip（） 作用：合并 多个被观察者（Observable）发送的事件，生成一个新的事件序列（即组合过后的事件序列），并最终发送  Tip:事件组合方式 = 严格按照原先事件序列 进行对位合并最终合并的事件数量 = 多个被观察者（Observable）中数量最少的数量  
+8.combineLatest（） 作用：当两个Observables中的任何一个发送了数据后，将先发送了数据的Observables 的最新（最后）一个数据 与 另外一个Observable发送的每个数据结合，最终基于该函数的结果发送数据  
+9.combineLatestDelayError（） 作用：类似于concatDelayError（） / mergeDelayError（） ，即错误处理  
+10.reduce（） 作用：把被观察者需要发送的事件聚合成1个事件 & 发送  本质：聚合的逻辑根据需求撰写，但本质都是前2个数据聚合，然后与后1个数据继续进行聚合，依次类推  
+11.collect（） 作用：将被观察者Observable发送的数据事件收集到一个数据结构里
                     
 
 
