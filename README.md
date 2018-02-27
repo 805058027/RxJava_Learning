@@ -95,7 +95,7 @@ delay(long delay,TimeUnit unit,mScheduler scheduler,boolean delayError): 指定�
  
  do（） 作用：在某个事件的生命周期中调用
  
-![do操作符介绍](https://github.com/805058027/RxJava_Learning/tree/master/app/pic/do.png)
+![do操作符介绍](https://github.com/805058027/RxJava_Learning/tree/master/screenshots/do.png)
                     
 
 
