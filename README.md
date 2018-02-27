@@ -68,6 +68,28 @@ count（）  统计被观察者发送事件的数量
 
 操作符:subscribeOn（）和 observeOn（）  
 详细讲解参考：[Android RxJava：细说 线程控制（切换 / 调度 ）（含Retrofit实例讲解）](https://www.jianshu.com/p/5225b2baaecd)
+
+### 延迟操作
+
+1.delay（）  作用：使得被观察者延迟一段时间再发送事件
+<pre><code>
+// 1. 指定延迟时间
+// 参数1 = 时间；参数2 = 时间单位
+delay(long delay,TimeUnit unit)
+
+// 2. 指定延迟时间 & 调度器
+// 参数1 = 时间；参数2 = 时间单位；参数3 = 线程调度器
+delay(long delay,TimeUnit unit,mScheduler scheduler)
+
+// 3. 指定延迟时间  & 错误延迟
+// 错误延迟，即：若存在Error事件，则如常执行，执行后再抛出错误异常
+// 参数1 = 时间；参数2 = 时间单位；参数3 = 错误延迟参数
+delay(long delay,TimeUnit unit,boolean delayError)
+
+// 4. 指定延迟时间 & 调度器 & 错误延迟
+// 参数1 = 时间；参数2 = 时间单位；参数3 = 线程调度器；参数4 = 错误延迟参数
+delay(long delay,TimeUnit unit,mScheduler scheduler,boolean delayError): 指定延迟多长时间并添加调度器，错误通知可以设置是否延迟
+</code></pre>
                     
 
 
