@@ -96,8 +96,37 @@ delay(long delay,TimeUnit unit,mScheduler scheduler,boolean delayError): 指定�
  do（） 作用：在某个事件的生命周期中调用
  
 ![do操作符介绍](https://github.com/805058027/RxJava_Learning/raw/master/screenshots/do.png)
-                    
 
+ ### 错误处理
+ 
+ ![错误操作符介绍](https://github.com/805058027/RxJava_Learning/raw/master/screenshots/error.png)  
+ 1.onErrorReturn（）  作用:遇到错误时，发送1个特殊事件 & 正常终止  可捕获在它之前发生的异常  
+ 2.onErrorResumeNext（）  作用:遇到错误时，发送1个新的Observable  拦截的错误 = Throwable  
+ 3.onExceptionResumeNext()  作用:拦截的错误 = Throwable 拦截的错误 = Exception  
+ 4.retry（） 作用：重试，即当出现错误时，让被观察者（Observable）重新发射数据,接收到 onError（）时，重新订阅 & 发送事件
+Throwable 和 Exception都可拦截
+<pre><code><-- 1. retry（） -->
+// 作用：出现错误时，让被观察者重新发送数据
+// 注：若一直错误，则一直重新发送
+
+<-- 2. retry（long time） -->
+// 作用：出现错误时，让被观察者重新发送数据（具备重试次数限制
+// 参数 = 重试次数
+ 
+<-- 3. retry（Predicate predicate） -->
+// 作用：出现错误后，判断是否需要重新发送数据（若需要重新发送& 持续遇到错误，则持续重试）
+// 参数 = 判断逻辑
+
+<--  4. retry（new BiPredicate<Integer, Throwable>） -->
+// 作用：出现错误后，判断是否需要重新发送数据（若需要重新发送 & 持续遇到错误，则持续重试
+// 参数 =  判断逻辑（传入当前重试次数 & 异常错误信息）
+
+<-- 5. retry（long time,Predicate predicate） -->
+// 作用：出现错误后，判断是否需要重新发送数据（具备重试次数限制
+// 参数 = 设置重试次数 & 判断逻辑
+</code></pre>  
+5.retryUntil（） 作用：出现错误后，判断是否需要重新发送数据,若需要重新发送 & 持续遇到错误，则持续重试作用类似于retry（Predicate predicate）  
+6.retryWhen（） 作用：遇到错误时，将发生的错误传递给一个新的被观察者（Observable），并决定是否需要重新订阅原始被观察者（Observable）& 发送事件
 
 
 
