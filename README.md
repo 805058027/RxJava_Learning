@@ -66,7 +66,8 @@ count（）  统计被观察者发送事件的数量
 
 ### 线程调度
 
-参考：[简书](https://www.jianshu.com/p/5225b2baaecd)
+操作符:subscribeOn（）和 observeOn（）  
+详细讲解参考：[Android RxJava：细说 线程控制（切换 / 调度 ）（含Retrofit实例讲解）](https://www.jianshu.com/p/5225b2baaecd)
                     
 
 
