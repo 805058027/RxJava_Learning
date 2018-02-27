@@ -36,7 +36,10 @@
         <activity android:name=".CombinationOperator.CollectActivity" />
         <activity android:name=".CombinationOperator.StartWithActivity" />
         <activity android:name=".CombinationOperator.CountActivity" />
-
+        <activity android:name=".FunctionalityOperator.DelayActivity"/>
+        <activity android:name=".FunctionalityOperator.DoActivity"/>
+        <activity android:name=".FunctionalityOperator.ErrorActivity"/>
+        <activity android:name=".FunctionalityOperator.RetryActivity"/>
     </application>
 
 </manifest>

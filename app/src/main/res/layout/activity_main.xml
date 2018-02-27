@@ -159,6 +159,37 @@
                 android:layout_height="wrap_content"
                 android:text="count操作符"
                 android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="delay操作符"
+                android:textAllCaps="false" />
+            <Button
+                android:id="@+id/btn22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="do操作符"
+                android:textAllCaps="false" />
+            <Button
+                android:id="@+id/btn23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Error操作符"
+                android:textAllCaps="false" />
+            <Button
+                android:id="@+id/btn24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="retry操作符"
+                android:textAllCaps="false" />
+            <Button
+                android:id="@+id/btn25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="repeat--repeatWhen"
+                android:textAllCaps="false" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
