@@ -63,6 +63,10 @@ startWith（） / startWithArray（）   在一个被观察者发送事件前，
 ### 统计发送事件数量
 
 count（）  统计被观察者发送事件的数量
+
+### 线程调度
+
+参考：[简书](https://www.jianshu.com/p/5225b2baaecd)
                     
 
 
