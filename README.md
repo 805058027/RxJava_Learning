@@ -71,7 +71,7 @@ count（）  统计被观察者发送事件的数量
 
 ### 延迟操作
 
-1.delay（）  作用：使得被观察者延迟一段时间再发送事件
+delay（）  作用：使得被观察者延迟一段时间再发送事件
 <pre><code>
 // 1. 指定延迟时间
 // 参数1 = 时间；参数2 = 时间单位
@@ -90,6 +90,12 @@ delay(long delay,TimeUnit unit,boolean delayError)
 // 参数1 = 时间；参数2 = 时间单位；参数3 = 线程调度器；参数4 = 错误延迟参数
 delay(long delay,TimeUnit unit,mScheduler scheduler,boolean delayError): 指定延迟多长时间并添加调度器，错误通知可以设置是否延迟
 </code></pre>
+
+ ### 在事件的生命周期中操作
+ 
+ do（） 作用：在某个事件的生命周期中调用
+ 
+![图片说明1]（https://github.com/RxJava_Learning/app/pic/do.png）
                     
 
 
