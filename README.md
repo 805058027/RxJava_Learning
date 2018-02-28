@@ -128,5 +128,10 @@ Throwable 和 Exception都可拦截
 5.retryUntil（） 作用：出现错误后，判断是否需要重新发送数据,若需要重新发送 & 持续遇到错误，则持续重试作用类似于retry（Predicate predicate）  
 6.retryWhen（） 作用：遇到错误时，将发生的错误传递给一个新的被观察者（Observable），并决定是否需要重新订阅原始被观察者（Observable）& 发送事件
 
+### 重复发送
+
+1.repeat（） 作用：无条件地、重复发送 被观察者事件  具备重载方法，可设置重复创建次数  
+2.repeatWhen（） 作用：有条件地、重复发送 被观察者事件  将原始 Observable 停止发送事件的标识（Complete（） /  Error（））转换成1个 Object 类型数据传递给1个新被观察者（Observable），以此决定是否重新订阅 & 发送原来的  Observable
+
 
 
