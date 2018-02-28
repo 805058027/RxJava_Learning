@@ -89,6 +89,12 @@
                 android:layout_height="wrap_content"
                 android:text="Buffer操作符"
                 android:textAllCaps="false" />
+            <Button
+                android:id="@+id/btn26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="操作符的实战操作"
+                android:textAllCaps="false" />
         </LinearLayout>
 
         <LinearLayout

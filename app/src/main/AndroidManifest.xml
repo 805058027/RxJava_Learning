@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.administrator.rxjava_learning">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -36,10 +38,15 @@
         <activity android:name=".CombinationOperator.CollectActivity" />
         <activity android:name=".CombinationOperator.StartWithActivity" />
         <activity android:name=".CombinationOperator.CountActivity" />
-        <activity android:name=".FunctionalityOperator.DelayActivity"/>
-        <activity android:name=".FunctionalityOperator.DoActivity"/>
-        <activity android:name=".FunctionalityOperator.ErrorActivity"/>
-        <activity android:name=".FunctionalityOperator.RetryActivity"/>
+        <activity android:name=".FunctionalityOperator.DelayActivity" />
+        <activity android:name=".FunctionalityOperator.DoActivity" />
+        <activity android:name=".FunctionalityOperator.ErrorActivity" />
+        <activity android:name=".FunctionalityOperator.RetryActivity" />
+        <activity android:name=".FunctionalityOperator.RepeatActivity" />
+        <activity android:name=".PracticeActivity" />
+        <activity android:name=".RetrofitRxJava.RxJavafixRetrofit" />
+        <activity android:name=".RetrofitRxJava.RxJavafixRetrofit1"/>
+        <activity android:name=".RetrofitRxJava.RxJavafixRetrofit2"/>
     </application>
 
 </manifest>
