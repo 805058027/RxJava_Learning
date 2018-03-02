@@ -25,6 +25,7 @@ import io.reactivex.schedulers.Schedulers;
 
 /**
  * 网络的合并操作
+ * 先调用注册接口  在调用登录接口。链式操作
  */
 
 public class RxJavafixRetrofit2 extends Activity {

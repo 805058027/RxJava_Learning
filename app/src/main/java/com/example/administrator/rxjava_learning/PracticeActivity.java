@@ -5,13 +5,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
-import android.widget.Button;
 
+import com.example.administrator.rxjava_learning.RetrofitRxJava.CheckActivity;
+import com.example.administrator.rxjava_learning.RetrofitRxJava.JointJudgmentActivity;
 import com.example.administrator.rxjava_learning.RetrofitRxJava.RxJavafixRetrofit;
 import com.example.administrator.rxjava_learning.RetrofitRxJava.RxJavafixRetrofit1;
 import com.example.administrator.rxjava_learning.RetrofitRxJava.RxJavafixRetrofit2;
+import com.example.administrator.rxjava_learning.RetrofitRxJava.RxJavafixRetrofit3;
+import com.example.administrator.rxjava_learning.RetrofitRxJava.RxJavafixRetrofit4;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -20,8 +22,6 @@ import butterknife.OnClick;
  */
 
 public class PracticeActivity extends Activity {
-    @BindView(R.id.btn1)
-    Button btn1;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class PracticeActivity extends Activity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.btn1,R.id.btn2,R.id.btn3})
+    @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4, R.id.btn5, R.id.btn6, R.id.btn7})
     public void OnClick(View view) {
         switch (view.getId()) {
             case R.id.btn1:
@@ -41,6 +41,18 @@ public class PracticeActivity extends Activity {
                 break;
             case R.id.btn3:
                 startActivity(new Intent(this, RxJavafixRetrofit2.class));
+                break;
+            case R.id.btn4:
+                startActivity(new Intent(this, RxJavafixRetrofit3.class));
+                break;
+            case R.id.btn5:
+                startActivity(new Intent(this, CheckActivity.class));
+                break;
+            case R.id.btn6:
+                startActivity(new Intent(this, JointJudgmentActivity.class));
+                break;
+            case R.id.btn7:
+                startActivity(new Intent(this, RxJavafixRetrofit4.class));
                 break;
         }
     }

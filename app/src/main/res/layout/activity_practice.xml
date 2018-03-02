@@ -8,20 +8,49 @@
         android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="（无条件）网络请求轮询"
+        android:text="（无条件）网络请求轮询-interval操作符"
         android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="（有条件）网络请求轮询"
+        android:text="（有条件）网络请求轮询-repeatWhen操作符"
         android:textAllCaps="false" />
 
     <Button
         android:id="@+id/btn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="网络合并操作"
+        android:text="网络合并操作-flatMap操作符"
         android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="数据合并操作-Merge-Zip操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Concat操作符实战运用"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 联合判断多个事件-combineLatest操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btn7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 网络请求出错重连-retryWhen操作符"
+        android:textAllCaps="false" />
+
 </LinearLayout>

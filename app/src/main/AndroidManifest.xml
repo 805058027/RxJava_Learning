@@ -48,6 +48,10 @@
         <activity android:name=".RetrofitRxJava.RxJavafixRetrofit" />
         <activity android:name=".RetrofitRxJava.RxJavafixRetrofit1"/>
         <activity android:name=".RetrofitRxJava.RxJavafixRetrofit2"/>
+        <activity android:name=".RetrofitRxJava.RxJavafixRetrofit3"/>
+        <activity android:name=".RetrofitRxJava.CheckActivity"/>
+        <activity android:name=".RetrofitRxJava.JointJudgmentActivity"/>
+        <activity android:name=".RetrofitRxJava.RxJavafixRetrofit4"/>
     </application>
 
 </manifest>
