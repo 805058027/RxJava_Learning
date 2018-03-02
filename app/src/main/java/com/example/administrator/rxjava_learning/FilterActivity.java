@@ -6,6 +6,11 @@ import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.jakewharton.rxbinding2.view.RxView;
+import com.jakewharton.rxbinding2.widget.RxTextView;
 
 import java.util.concurrent.TimeUnit;
 
@@ -16,10 +21,10 @@ import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
-import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
 
 /**
@@ -29,6 +34,12 @@ import io.reactivex.functions.Predicate;
 public class FilterActivity extends Activity {
 
     private static final String TAG = "RxJava";
+    @BindView(R.id.filter_btn11)
+    Button filterBtn11;
+    @BindView(R.id.ed)
+    EditText ed;
+    @BindView(R.id.tv)
+    TextView tv;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,7 +49,8 @@ public class FilterActivity extends Activity {
     }
 
     @OnClick({R.id.filter_btn1, R.id.filter_btn2, R.id.filter_btn3, R.id.filter_btn4, R.id.filter_btn5,
-            R.id.filter_btn6, R.id.filter_btn7, R.id.filter_btn8, R.id.filter_btn9, R.id.filter_btn10})
+            R.id.filter_btn6, R.id.filter_btn7, R.id.filter_btn8, R.id.filter_btn9, R.id.filter_btn10,
+            R.id.filter_btn11, R.id.filter_btn12})
     public void OnClick(View view) {
         switch (view.getId()) {
             case R.id.filter_btn1:
@@ -70,6 +82,12 @@ public class FilterActivity extends Activity {
                 break;
             case R.id.filter_btn10:
                 elementAtOrError();
+                break;
+            case R.id.filter_btn11:
+                btn();
+                break;
+            case R.id.filter_btn12:
+                edit();
                 break;
         }
     }
@@ -405,4 +423,70 @@ public class FilterActivity extends Activity {
                     }
                 });
     }
+
+    private void btn() {
+        //1. 此处采用了RxBinding：RxView.clicks(button) = 对控件点击进行监听
+        //2. 传入Button控件，点击时，都会发送数据事件（但由于使用了throttleFirst（）操作符，
+        // 所以只会发送该段时间内的第1次点击事件）
+        RxView.clicks(filterBtn11)
+                .throttleFirst(2, TimeUnit.SECONDS)  // 才发送 2s内第1次点击按钮的事件
+                .subscribe(new Observer<Object>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(Object value) {
+                        Log.d(TAG, "发送了网络请求");
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.d(TAG, "对Error事件作出响应" + e.toString());
+                        // 获取异常错误信息
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        Log.d(TAG, "对Complete事件作出响应");
+                    }
+                });
+    }
+
+    private void edit() {
+      /*
+         * 说明
+         * 1. 此处采用了RxBinding：RxTextView.textChanges(name) = 对对控件数据变更进行监听（功能类似TextWatcher），需要引入依赖：compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+         * 2. 传入EditText控件，输入字符时都会发送数据事件（此处不会马上发送，因为使用了debounce（））
+         * 3. 采用skip(1)原因：跳过 第1次请求 = 初始输入框的空字符状态
+         **/
+        RxTextView.textChanges(ed)
+                .debounce(1, TimeUnit.SECONDS).skip(1)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<CharSequence>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(CharSequence charSequence) {
+                        tv.setText("发送给服务器的字符 = " + charSequence.toString());
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Log.d(TAG, "对Error事件作出响应");
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        Log.d(TAG, "对Complete事件作出响应");
+                    }
+                });
+
+    }
+
 }

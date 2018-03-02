@@ -1,76 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:focusable="true"
+    android:focusableInTouchMode="true">
 
-    <Button
-        android:id="@+id/filter_btn1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="filter操作符"
-        android:textAllCaps="false" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/filter_btn2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ofType操作符"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/filter_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="filter操作符"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/filter_btn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="skip--skipLast操作符"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/filter_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ofType操作符"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/filter_btn4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="distinct--distinctUntilChanged操作符"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/filter_btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="skip--skipLast操作符"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/filter_btn5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="take--takeLast操作符"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/filter_btn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="distinct--distinctUntilChanged操作符"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/filter_btn6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="throttleFirst--throttleLast操作符"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/filter_btn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="take--takeLast操作符"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/filter_btn7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="throttleWithTimeout--debounce操作符"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/filter_btn6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="throttleFirst--throttleLast操作符"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/filter_btn8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="firstElement--lastElement操作符"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/filter_btn7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="throttleWithTimeout--debounce操作符"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/filter_btn9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="elementAt操作符"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/filter_btn8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="firstElement--lastElement操作符"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/filter_btn10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="elementAtOrError操作符"
-        android:textAllCaps="false" />
-</LinearLayout>
+        <Button
+            android:id="@+id/filter_btn9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="elementAt操作符"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/filter_btn10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="elementAtOrError操作符"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="功能防抖 通过一次点击事件请求一个网络请求,避免连续点击造成的不必要网络请求" />
+
+        <Button
+            android:id="@+id/filter_btn11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="利用throttleFirst操作符实现"
+            android:textAllCaps="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联想搜索 当字符输入完毕几秒后请求网络,防止不必要的网络请求" />
+
+        <Button
+            android:id="@+id/filter_btn12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="debounce操作符实现(无点击效果)"
+            android:textAllCaps="false" />
+
+        <EditText
+            android:id="@+id/ed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="输入搜索字段" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>
