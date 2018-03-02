@@ -133,5 +133,19 @@ Throwable 和 Exception都可拦截
 1.repeat（） 作用：无条件地、重复发送 被观察者事件  具备重载方法，可设置重复创建次数  
 2.repeatWhen（） 作用：有条件地、重复发送 被观察者事件  将原始 Observable 停止发送事件的标识（Complete（） /  Error（））转换成1个 Object 类型数据传递给1个新被观察者（Observable），以此决定是否重新订阅 & 发送原来的  Observable
 
+### 过滤操作符
+
+1.Filter（） 作用：过滤 特定条件的事件  
+2.ofType（） 作用：过滤 特定数据类型的数据  
+3.skip（） / skipLast（） 作用：跳过某个事件  
+4.distinct（） / distinctUntilChanged（） 作用：过滤事件序列中重复的事件 / 连续重复的事件  
+5.take（）/ takeLast（）作用：指定观察者最多能接收到的事件数量/指定观察者只能接收到被观察者发送的最后几个事件  
+6.throttleFirst（）/ throttleLast（）  作用：在某段时间内，只发送该段时间内第1次事件 / 最后1次事件  
+7.Sample（） 作用：在某段时间内，只发送该段时间内最新（最后）1次事件与 throttleLast（） 操作符类似  
+8.throttleWithTimeout （） / debounce（） 作用：发送数据事件时，若2次发送事件的间隔＜指定时间，就会丢弃前一次的数据，直到指定时间内都没有新数据发射时才会发送后一次的数据  
+9.firstElement（） / lastElement（） 作用：仅选取第1个元素 / 最后一个元素  
+10.elementAt（） 作用：指定接收某个元素（通过 索引值 确定） 注：允许越界，即获取的位置索引 ＞ 发送事件序列长度  
+11.elementAtOrError（） 作用：在elementAt（）的基础上，当出现越界情况（即获取的位置索引 ＞ 发送事件序列长度）时，即抛出异常
+
 
 
