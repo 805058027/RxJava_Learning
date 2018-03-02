@@ -52,6 +52,7 @@
         <activity android:name=".RetrofitRxJava.CheckActivity"/>
         <activity android:name=".RetrofitRxJava.JointJudgmentActivity"/>
         <activity android:name=".RetrofitRxJava.RxJavafixRetrofit4"/>
+        <activity android:name=".FilterActivity"/>
     </application>
 
 </manifest>

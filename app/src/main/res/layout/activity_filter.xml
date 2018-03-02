@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/filter_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="filter操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/filter_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ofType操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/filter_btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="skip--skipLast操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/filter_btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="distinct--distinctUntilChanged操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/filter_btn5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="take--takeLast操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/filter_btn6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="throttleFirst--throttleLast操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/filter_btn7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="throttleWithTimeout--debounce操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/filter_btn8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="firstElement--lastElement操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/filter_btn9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="elementAt操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/filter_btn10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="elementAtOrError操作符"
+        android:textAllCaps="false" />
+</LinearLayout>

@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     @OnClick({R.id.btn1, R.id.btn2, R.id.btn3, R.id.btn4, R.id.btn5, R.id.btn6, R.id.btn7, R.id.btn8,
             R.id.btn9, R.id.btn10, R.id.btn11, R.id.btn12, R.id.btn13, R.id.btn14, R.id.btn15, R.id.btn16,
             R.id.btn17, R.id.btn18, R.id.btn19, R.id.btn20, R.id.btn21, R.id.btn22, R.id.btn23, R.id.btn24,
-            R.id.btn25, R.id.btn26})
+            R.id.btn25, R.id.btn26,R.id.filter})
     public void OnClick(View view) {
         switch (view.getId()) {
             case R.id.btn1:
@@ -126,6 +126,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn26:
                 startActivity(new Intent(this, PracticeActivity.class));
+                break;
+            case R.id.filter:
+                startActivity(new Intent(this, FilterActivity.class));
                 break;
         }
     }
