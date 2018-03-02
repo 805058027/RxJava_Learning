@@ -37,10 +37,14 @@
 10.rangeLong（）  作用：类似range方法,但是只支持long类型  
 
 ### 变换操作符
-
+![map操作符介绍](https://github.com/805058027/RxJava_Learning/raw/master/screenshots/map.png)  
 1.Map（）作用：将被观察者发送的事件转换为任意的类型事件（数据类型转换）  
+![FlatMap操作符介绍](https://github.com/805058027/RxJava_Learning/raw/master/screenshots/flotMap.png)  
 2.FlatMap（） 作用：将被观察者发送的事件序列进行 拆分 & 单独转换，再合并成一个新的事件序列，最后再进行发送  
+![ConcatMap操作符介绍](https://github.com/805058027/RxJava_Learning/raw/master/screenshots/ConcatMap.png)  
 3.ConcatMap（） 作用：与FlatMap类似,就是发送事件顺序有序  
+![Buffer操作符介绍](https://github.com/805058027/RxJava_Learning/raw/master/screenshots/Buffer.png)  
+![Buffer操作符介绍](https://github.com/805058027/RxJava_Learning/raw/master/screenshots/Buffer1.png)  
 4.Buffer（） 作用：定期从被观察者（Obervable）需要发送的事件中获取一定数量的事件&放到缓存区中，最终发送
 
 ### 组合操作符
