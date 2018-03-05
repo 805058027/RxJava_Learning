@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/boolean_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="all操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/boolean_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="takeWhile操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/boolean_btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="skipWhile操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/boolean_btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="takeUntil操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/boolean_btn5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="skipUntil操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/boolean_btn6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SequenceEqual操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/boolean_btn7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="contains操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/boolean_btn8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="isEmpty操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/boolean_btn9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="amb操作符"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/boolean_btn10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="defaultIfEmpty操作符"
+        android:textAllCaps="false" />
+</LinearLayout>
