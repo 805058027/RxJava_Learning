@@ -150,5 +150,8 @@ Throwable 和 Exception都可拦截
 10.elementAt（） 作用：指定接收某个元素（通过 索引值 确定） 注：允许越界，即获取的位置索引 ＞ 发送事件序列长度  
 11.elementAtOrError（） 作用：在elementAt（）的基础上，当出现越界情况（即获取的位置索引 ＞ 发送事件序列长度）时，即抛出异常
 
+### 条件 / 布尔操作符
+![条件 / 布尔操作符](https://github.com/805058027/RxJava_Learning/raw/master/screenshots/boolean.png)
+
 
 
