@@ -153,5 +153,9 @@ Throwable 和 Exception都可拦截
 ### 条件 / 布尔操作符
 ![条件 / 布尔操作符](https://github.com/805058027/RxJava_Learning/raw/master/screenshots/boolean.png)
 
+### 图文详解 背压策略
+ 
+详细讲解参考：[Android RxJava ：图文详解 背压策略](https://www.jianshu.com/p/ceb48ed8719d)
+
 
 
