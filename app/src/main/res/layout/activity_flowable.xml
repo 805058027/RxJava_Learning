@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/flowable_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Flowable的基础使用"
+        android:textAllCaps="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/flowable_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开启异步订阅"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/flowable_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="控制此次订阅中发送的事件个数"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/flowable_btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="同步订阅--观察者只能接受2个，被观察者发送数>2崩溃"
+        android:textAllCaps="false" />
+</LinearLayout>

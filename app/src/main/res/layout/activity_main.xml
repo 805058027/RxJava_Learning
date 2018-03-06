@@ -96,12 +96,21 @@
                 android:layout_height="wrap_content"
                 android:text="过滤操作符"
                 android:textAllCaps="false" />
+
             <Button
                 android:id="@+id/filter1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="过滤操作-条件/布尔"
                 android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btn27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图文详解 背压策略"
+                android:textAllCaps="false" />
+
             <Button
                 android:id="@+id/btn26"
                 android:layout_width="wrap_content"

@@ -54,6 +54,7 @@
         <activity android:name=".RetrofitRxJava.RxJavafixRetrofit4"/>
         <activity android:name=".FilterActivity"/>
         <activity android:name=".BooleanActivity"/>
+        <activity android:name=".FlowableActivity"/>
     </application>
 
 </manifest>
